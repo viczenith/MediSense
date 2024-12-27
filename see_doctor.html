@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced AI Health Diagnosis Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1> MediSense AI Health Diagnosis</h1>
+        <!-- Hero Section -->
+        <div class="hero">
+            <h5>Your Virtual Health Assistant</h5>
+            <p> <small class="p-0 fw-lighter"> Analyze your symptoms and connect with a doctor instantly.</small> </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Diagnosis Form Section -->
+        <section class="cta_container">
+            <nav>
+                <section class="d-flex justify-content-between cta_nav">
+                    <div class="text-left bg-danger"> <button type="button" class="btn border-0" id="nav_toggle"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#fff"><path d="M360-120v-720h60v720h-60Zm175-181v-358l185 179-185 179Z"/></svg>
+                    </button> </div>
+                    <a href="./" class="shadow-sm nav-link text-light p-3  w-100"> Symptoms Diagnosis </a>
+                    <a href="see_doctor.html" class="shadow-sm nav-link text-light p-3 active w-100"> Meet a Doctor </a>
+                    <a href="live_chat.html" class="shadow-sm nav-link text-light p-3 w-100"> Live Support </a>
+                </section>
+            </nav>
+            <section class="">
+                    <h3 class="h6 my-3 p-2"> Stanby Doctors Reference  </h3>
+                    <table class="table table-light table-sm ">
+                            <tr>
+                                <th> S/NO</th>
+                                <th> Name </th>
+                                <th> Specialization </th>
+                                <th> Region/City</th>
+                            </tr>
+                             
+                            <tr>
+                                <td> 01 </td>
+                                <td> <a href="">  Sam Page</a>  </td>
+                                <td> Skin Disease </td>
+                                <td> AMAC</td>
+                            </tr>
+                            <tr>
+                                <td> 01 </td>
+                                <td> <a href="">  Sam Page</a>  </td>
+                                <td> Skin Disease </td>
+                                <td> AMAC</td>
+                            </tr>
+                            <tr>
+                                <td> 01 </td>
+                                <td> <a href="">  Sam Page</a>  </td>
+                                <td> Skin Disease </td>
+                                <td> AMAC</td>
+                            </tr>
+                            <tr>
+                                <td> 01 </td>
+                                <td> <a href="">  Sam Page</a>  </td>
+                                <td> Skin Disease </td>
+                                <td> AMAC</td>
+                            </tr>
+                            <tr>
+                                <td> 01 </td>
+                                <td> <a href="">  Sam Page</a>  </td>
+                                <td> Skin Disease </td>
+                                <td> AMAC</td>
+                            </tr>
+                            
+                    </table>
+                                 
+            </section>
+        </section>
+
+        <!-- Modal Section -->
+        <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resultModalLabel">Diagnosis Result</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {% if result %}
+                            <p>{{ result }}</p>
+                        {% else %}
+                            <p>No data available yet. Please enter your symptoms to analyze.</p>
+                        {% endif %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="{% url 'diagnosis_form' %}" class="btn btn-primary">Analyze Another</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h3 class="text-primary">Why <span class="text-primary-light"> mediSense</span> A<i>i</i></h3>
+                    <div class="d_flex">
+                        <div class="floating-animation bg-light shadow-sm featured-item m-sm-2">
+                            <i class=''>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="M833.33-120 630-323.33q-40.33 32-91.17 51-50.83 19-105.5 19-84 0-153.5-40.34Q210.33-334 168.33-400h83.34q34.66 37 81.16 58.5t100.5 21.5Q536-320 608-392.33q72-72.34 72-174.34 0-102.66-72-174.66t-174.67-72q-98.66 0-169.83 67.83Q192.33-677.67 187-580h-66.67q5.34-125.67 95.5-212.83Q306-880 433.33-880q130.67 0 222 91.33 91.34 91.34 91.34 222 0 54.67-19 105.5-19 50.84-51 91.17L880-166.67 833.33-120ZM397-400l-63-208-52 148H80v-60h160l66-190h60l61 204 43-134h60l60 120h30v60h-67l-47-94-50 154h-59Z"/></svg>
+                            </i>
+                            <h5 class="text-primary-light">AI Symptom Analysis</h5>
+                            <p> AI potential precision based on your health diagnosis.</p>
+                        </div>
+                        <div class="floating-animation bg-light shadow-sm featured-item m-sm-2">
+                        <i class="">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="M140-80q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h180v-100q0-24 18-42t42-18h200q24 0 42 18t18 42v100h180q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680v-520H140v520Zm240-580h200v-100H380v100ZM140-140v-520 520Zm310-230v120h60v-120h120v-60H510v-120h-60v120H330v60h120Z"/></svg>
+                        </i>
+                        <h5>Telemedicine</h5>
+                        <p>Connect with certified doctors for consultations.</p>
+                    </div>
+                    <div class="floating-animation bg-light shadow-sm featured-item m-sm-2">
+                        <i class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M440-120v-60h340v-304q0-123.69-87.32-209.84Q605.36-780 480-780q-125.36 0-212.68 86.16Q180-607.69 180-484v244h-20q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v69q0 24.75-17.62 42.37Q804.75-120 780-120H440Zm-80.18-290q-12.82 0-21.32-8.68-8.5-8.67-8.5-21.5 0-12.82 8.68-21.32 8.67-8.5 21.5-8.5 12.82 0 21.32 8.68 8.5 8.67 8.5 21.5 0 12.82-8.68 21.32-8.67 8.5-21.5 8.5Zm240 0q-12.82 0-21.32-8.68-8.5-8.67-8.5-21.5 0-12.82 8.68-21.32 8.67-8.5 21.5-8.5 12.82 0 21.32 8.68 8.5 8.67 8.5 21.5 0 12.82-8.68 21.32-8.67 8.5-21.5 8.5ZM241-462q-7-106 64-182t177-76q87 0 151 57.5T711-519q-89-1-162.5-50T434.72-698Q419-618 367.5-555.5T241-462Z"/></svg>
+                        </i>
+                        <h5 class="text-primary-light">24/7 Availability</h5>
+                        <p>Access the tool anytime, anywhere.</p>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2024 AI Health Solutions. Bringing healthcare closer to you.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script defer async src="../savvy/js/jquery.js"></script>
+</body>
+
+</html>

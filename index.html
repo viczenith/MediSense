@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced AI Health Diagnosis Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1> MediSense AI Health Diagnosis</h1>
+        <!-- Hero Section -->
+        <div class="hero">
+            <h5>Your Virtual Health Assistant</h5>
+            <p> <small class="p-0 fw-lighter"> Analyze your symptoms and connect with a doctor instantly.</small> </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Diagnosis Form Section -->
+        <section class="cta_container">
+            <nav>
+                <section class="d-flex justify-content-between cta_nav">
+                    <div class="text-left bg-danger"> <button type="button" class="btn border-0" id="nav_toggle"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#fff"><path d="M360-120v-720h60v720h-60Zm175-181v-358l185 179-185 179Z"/></svg>
+                    </button> </div>
+                    <a href="./" class="shadow-sm nav-link text-light p-3  w-100"> Symptoms Diagnosis 
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--bs-light)"><path d="M540-80q-108 0-184-76t-76-184v-23q-86-14-143-80.5T80-600v-240h120v-40h80v160h-80v-40h-40v160q0 66 47 113t113 47q66 0 113-47t47-113v-160h-40v40h-80v-160h80v40h120v240q0 90-57 156.5T360-363v23q0 75 52.5 127.5T540-160q75 0 127.5-52.5T720-340v-67q-35-12-57.5-43T640-520q0-50 35-85t85-35q50 0 85 35t35 85q0 39-22.5 70T800-407v67q0 108-76 184T540-80Zm220-400q17 0 28.5-11.5T800-520q0-17-11.5-28.5T760-560q-17 0-28.5 11.5T720-520q0 17 11.5 28.5T760-480Zm0-40Z"/></svg>
+                    </a>
+                    <a href="see_doctor.html" class="shadow-sm nav-link text-light p-3  w-100"> Meet a Doctor 
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--bs-light)"><path d="M440-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560ZM884-20 756-148q-21 12-45 20t-51 8q-75 0-127.5-52.5T480-300q0-75 52.5-127.5T660-480q75 0 127.5 52.5T840-300q0 27-8 51t-20 45L940-76l-56 56ZM660-200q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm-540 40v-111q0-34 17-63t47-44q51-26 115-44t142-18q-12 18-20.5 38.5T407-359q-60 5-107 20.5T221-306q-10 5-15.5 14.5T200-271v31h207q5 22 13.5 42t20.5 38H120Zm320-480Zm-33 400Z"/></svg>
+                    </a>
+                    <a href="live_chat.html" class="shadow-sm nav-link text-light p-3 active w-100"> 
+                        Live Support 
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--bs-danger)"><path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/></svg>
+                    </a>
+                </section>
+            </nav>
+            <section class="">
+                    <h3 class="h6 my-3 p-2"> Live Support  </h3>
+                    <section>
+                            <div class="response_container" id="response_container">
+                                <div class="response alert alert-success">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                </div>
+                                <div class="response alert alert-success">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                </div>
+                                <div class="response alert alert-success">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                </div>
+                                <div class="response alert alert-success">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                </div>
+                                <div class="response alert alert-success">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti, aperiam unde dicta officia 
+                                </div>
+                            </div>
+                            <div id="thinking" class="ps-3"> <div class='spinner-grow spinner-grow-sm text-dark'></div> </div>
+                            <textarea name="" id="prompt" rows="4"  autofocus></textarea>
+                            <button type="button" class="mt-0 btn btn-sm btn-primary container" id="make_prompt"> Send</button>
+                    </section>
+                         
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2024 AI Health Solutions. Bringing healthcare closer to you.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../savvy/js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
